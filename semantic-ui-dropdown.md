@@ -48,7 +48,7 @@ If your selector is the `select` (or `input`) element itself, then use:<br />
 `$({selector}).parent().dropdown()`
 
 ## Full Text Search
-By default, the search function will only look at the first letters/characters of the options. If you want to be able to search the full text then set the `fullTextSearch` option into **true**
+By default, the search function will only look at the first letters/characters of the options. If you want to be able to search the full text then set the `fullTextSearch` option into **true**<br />
 `$({selector}).dropdown({`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`fullTextSearch: true,`<br />
 `});`<br />
@@ -57,7 +57,7 @@ For the full list of options, refer to the link below:<br />
 https://1.semantic-ui.com/modules/dropdown.html
 
 ## Action Event
-To set an action event, follow the code below:
+To set an action event, follow the code below:<br />
 `$( {selector} ).dropdown( {`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`action: "activate",`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`onChange: function( id ){`<br />
