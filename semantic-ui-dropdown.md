@@ -47,8 +47,23 @@ If your selector is the `select` (or `input`) element itself, then use:<br />
 
 `$({selector}).parent().dropdown()`
 
+## Full Text Search
+By default, the search function will only look at the first letters/characters of the options. If you want to be able to search the full text then set the `fullTextSearch` option into **true**
+`$({selector}).dropdown({`
+&nbsp;&nbsp;&nbsp;&nbsp;`fullTextSearch: true,`
+`});`
+
+For the full list of options, refer to the link below:<br />
+https://1.semantic-ui.com/modules/dropdown.html
+
 ## Action Event
-Set or bind the `onchange` event to the `select` or `input` element NOT on the parent element.
+To set an action event, follow the code below:
+`$( {selector} ).dropdown( {`
+&nbsp;&nbsp;&nbsp;&nbsp;`action: "activate",`
+&nbsp;&nbsp;&nbsp;&nbsp;`onChange: function( id ){`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`// your event here`
+&nbsp;&nbsp;&nbsp;&nbsp;`}`
+`} );`
 
 ## NOTE
 Semantic UI Dropdown has more functionalities than the listed above. This documentation only covers how to use it for searchable dropdowns.
