@@ -3,7 +3,7 @@
 > This dropdown uses the Semantic UI Dropdown library.
 
 ## Installation / Import
-Add the following to your `$data` variable:
+Add the following to your `$data` variable of your controller:
 
 `$data` Index | Value
 -----|-----
