@@ -18,8 +18,8 @@ js | /assets/bower_components/semantic-ui-dropdown/dropdown.min.js
 &nbsp;&nbsp;&nbsp;&nbsp;`<select type="hidden" id="">`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option value="{option-1-value}">{Option 1 Text}</option>`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option value="{option-2-value}">{Option 2 Text}</option>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option value="{option-3-value}">Option 3 Text</option>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option value="{option-n-value}">Option N Text</option>`<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option value="{option-3-value}">{Option 3 Text}</option>`<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<option value="{option-n-value}">{Option N Text}</option>`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`</select>`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`<i class="dropdown icon"></i>`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`<div class="default text">{Your default text here/selected text on load}</div>`<br />
@@ -60,7 +60,7 @@ https://1.semantic-ui.com/modules/dropdown.html
 To set an action event, follow the code below:<br />
 `$( {selector} ).dropdown( {`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`action: "activate",`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;`onChange: function( id ){`<br />
+&nbsp;&nbsp;&nbsp;&nbsp;`onChange: function( value ){`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`// your event here`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;`}`<br />
 `} );`
