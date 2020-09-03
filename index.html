@@ -1,0 +1,70 @@
+<html>
+
+    <head>
+        <style>
+            .valid{
+                color: green;
+            }
+            .invalid{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="password-field" />
+        <button id="btn-test">Check Password</button>
+        <div>
+            <h4>Password Requirements</h4>
+            <ul id="requirements">
+            </ul>
+        </div>
+
+        <script src="JT_PasswordChecker.js"></script>
+        <script>
+            JT_PasswordChecker.init();
+            init();
+
+            function init(){
+                const req = document.getElementById( "requirements" );
+                const _pwd = JT_PasswordChecker;
+                for( let j = 0; j < _pwd.errors.length; j++ ){
+                    const msg = _pwd.errors[j].msg;
+                    const node = document.createElement("li");
+                    node.innerHTML = msg;
+                    req.append( node );
+                }
+            }
+
+            function evaluate(){
+                const req = document.getElementById( "requirements" );
+                const _pwd = JT_PasswordChecker;
+                req.innerHTML = "";
+                for( let j = 0; j < _pwd.errors.length; j++ ){
+                    const msg = _pwd.errors[j].msg;
+                    const valid = _pwd.errors[j].valid;
+                    const node = document.createElement("li");
+                    node.innerHTML = `${msg} [${valid ? "met" : "not met"}]`;
+                    node.classList.add( valid ? "valid" : "invalid" );
+                    req.append( node );
+                }
+            }
+
+            function trigger_checker(){
+                const string = document.getElementById("password-field").value;
+                const _pwd = JT_PasswordChecker;
+                _pwd.isValidPwd(string);
+                evaluate();
+            }
+
+            document.getElementById("btn-test").onclick = function(){
+                trigger_checker();
+            }
+            document.getElementById("password-field").onkeyup = function(k){
+                if( k.keyCode == 13 ){
+                    trigger_checker();
+                }
+            }
+        </script>
+    </body>
+
+</html>
